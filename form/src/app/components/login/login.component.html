@@ -1,0 +1,31 @@
+
+<!-- <div class="form-container">
+    <form (ngSubmit)="login()">
+      <h2>Login</h2>
+      <input type="text" [(ngModel)]="formData.email" name="email" placeholder="email Id" required />
+      <input type="password" [(ngModel)]="formData.password" name="password" placeholder="Password" required />
+      <label><input type="checkbox" /> Remember me</label>
+      <button type="submit">Login</button>
+      <p>Not Registered? <a routerLink="/signup">Create an Account</a></p>
+    </form>
+  </div> -->
+  
+
+
+  <div class="container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="formData.email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" [(ngModel)]="formData.password" name="password" required />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <br>
+    <p>Don't have an account? <a routerLink="/signup">Signup</a></p>
+  </div>
+  

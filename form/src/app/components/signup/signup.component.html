@@ -1,0 +1,85 @@
+
+  <div class="container">
+  <form #myForm="ngForm" (ngSubmit)="submitForm()">
+    <!-- First Name -->
+    <div class="box">
+      <label for="firstName" class="fl fontLabel"> First Name: </label>
+      <div class="new iconBox">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </div>
+      <div class="fr">
+        <input type="text" [(ngModel)]="formData.firstName" name="firstName" placeholder="First Name" class="textBox" autofocus required>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <!-- First Name -->
+
+    <!-- Last Name -->
+    <div class="box">
+      <label for="secondName" class="fl fontLabel"> Last Name: </label>
+      <div class="fl iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
+      <div class="fr">
+        <input type="text" required [(ngModel)]="formData.lastName" name="lastName" placeholder="Last Name" class="textBox">
+      </div>
+      <div class="clr"></div>
+    </div>
+    <!-- Last Name -->
+
+    <!-- Phone No. -->
+    <div class="box">
+      <label for="phone" class="fl fontLabel"> Phone No.: </label>
+      <div class="fl iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+      <div class="fr">
+        <input type="text" required [(ngModel)]="formData.phoneNo" name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox">
+      </div>
+      <div class="clr"></div>
+    </div>
+    <!-- Phone No. -->
+
+    <!-- Email ID -->
+    <div class="box">
+      <label for="email" class="fl fontLabel"> Email ID: </label>
+      <div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+      <div class="fr">
+        <input type="email" required [(ngModel)]="formData.email" name="email" placeholder="Email Id" class="textBox">
+      </div>
+      <div class="clr"></div>
+    </div>
+    <!-- Email ID -->
+
+    <!-- Password -->
+    <div class="box">
+      <label for="password" class="fl fontLabel"> Password </label>
+      <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+      <div class="fr">
+        <input type="password" required [(ngModel)]="formData.password" name="password" placeholder="Password" class="textBox">
+      </div>
+      <div class="clr"></div>
+    </div>
+    <!-- Password -->
+
+    <!-- Gender -->
+    <div class="box radio">
+      <label for="gender" class="fl fontLabel"> Gender: </label>
+      <input type="radio" name="gender" value="Male" [(ngModel)]="formData.gender" required> Male &nbsp; &nbsp; &nbsp; &nbsp;
+      <input type="radio" name="gender" value="Female" [(ngModel)]="formData.gender" required> Female
+    </div>
+    <!-- Gender -->
+
+    <!-- Terms and Conditions -->
+    <div class="box terms">
+      <input type="checkbox" [(ngModel)]="formData.termsAccepted" required> &nbsp; I accept the terms and conditions
+    </div>
+    <!-- Terms and Conditions -->
+
+    <!-- Submit Button -->
+    <div class="box" >
+      <input type="submit" name="Submit" class="submit" value="SUBMIT">
+    </div>
+    <p>Already have an account? <a routerLink="/login">Login</a></p>
+    <!-- Submit Button -->
+  </form>
+</div>
+
+
+<!-- style="background: #2d3e3f" -->
